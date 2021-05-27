@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>js函数初步</title>
+</head>
+<body>
+<script>
+    /**
+     * 函数的定义
+     * 第一种方式
+     * function 函数名（参数）{方法体}
+     * 函数名 = function(){}
+     */
+    function sum(a, b){
+        return a + b
+    }
+    let a = 10, b = 20;
+    alert(sum(a,b))
+
+    hello = function(userName){
+        alert("hello " + userName)
+    }
+</script>
+    <input type="button" value="hello" onclick="hello('zhangsan')">
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>js函数初步</title>
+</head>
+<body>
+<script>
+    /**
+     * js函数可以重载吗
+     */
+    function sum(a, b){
+        return a + b
+    }
+
+    let retValue1 = sum(1, 2)
+    alert("result =" + retValue1) // result = 3
+    let retValue2 = sum("jake")
+    alert("result =" + retValue2) // result = jackundefined
+    let retValue3 = sum()
+    alert("result =" + retValue3) // result = NaN
+    let retValue4 = sum(1, 2, 3)
+    alert("result =" + retValue4) // result = 3
+
+    /**
+     * 在js中函数名不能重名，当函数名重名时，后面的函数会覆盖之前的函数
+     * @param userName
+     */
+    function jack(userName){
+        alert("jack jack")
+    }
+    function jack(){
+        alert("jack")
+    }
+
+    jack("lisi") // jack
+</script>
+</body>
+</html>

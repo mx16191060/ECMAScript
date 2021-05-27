@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<!--
+    演示html嵌入js语句的第二种方式
+-->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    /**
+     * 暴露在script块中的代码会在html打开的时候执行，这个代码的执行不需要事件
+     * 脚本块可以出现在任意的位置
+     * js代码块重的注释和java中的注释类似
+     * 这种注释可以被javadoc.exe提取生成注释文档
+     * alert函数会阻塞页面的加载
+     */
+    window.alert("hello world!")
+</script>
+</body>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>js中的事件</title>
+</head>
+<body>
+<script type="text/javascript">
+  /*
+    blur 失去焦点
+    focus 获得焦点
+
+    click 鼠标单击
+    dblclick 鼠标双击
+
+    keydown 键盘按下
+    keyup 键盘弹起
+
+    mousedown 鼠标按下
+    mouseover 鼠标经过
+    mousemove 鼠标移动
+    mouseout 鼠标离开
+    mouseup 鼠标弹起
+
+    reset 重制表单
+    submit 提交表单
+
+    change 下拉列表选中项改变，或文本框内容改变
+    select 文本被选中
+    load 页面加载完毕
+    任何一个事件都会对应一个事件句柄，事件句柄是在事件前加on
+    onxxx出现在一个标签的属性位置。（整个句柄以属性形式存在
+   */
+  function sayHello(){
+    alert("hello world")
+  }
+</script>
+    <!--注册事件的第一种形式，直接在标签中使用事件句柄-->
+    <!--以下代码的含义是，将sayHello函数注册在按钮上，等待click事件发生后，该函数被浏览器调用，我们称这个函数为回调函数-->
+    <input type="button" value="hello" onclick="sayHello()"><br>
+    <input type="button" value="hello" id="mbt">
+    <input type="button" value="hello3" id="mbt2">
+    <input type="button" value="hello4" id="mbt3">
+<script>
+    function doSome(){
+        alert("do some")
+    }
+    /*
+    第二种注册事件的方式，是用纯js代码完成
+     */
+    // 第一步先获取button对象
+    let mbt = document.getElementById('mbt')
+    mbt.onclick = doSome
+
+    //使用匿名函数
+    let mbt2 = document.getElementById('mbt2')
+    mbt2.onclick=function (){
+        alert('123123')
+    }
+    document.getElementById('mbt3').onclick=function (){
+        alert('12312313123131')
+    }
+</script>
+</body>
+</html>

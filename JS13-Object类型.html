@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>object类型</title>
+</head>
+<body>
+<script>
+  /*
+  1、Object类型是所有类型的超类
+  2、属性 prototype属性（常用） constructor属性
+  3、方法 toString（）
+      valueOf（）
+      toLocalString（）
+  4、在JS中定义的类默认继承Object，会继承Object中所有的属性和方法，换句话说自己定义的类也有prototype属性
+  5、在JS中怎么定义类
+      第一种方式
+        function 类名（）{
+        }
+      第二种方式
+        类名 = function（）{
+        }
+      创建类的方法
+        new 类型（）；
+   */
+  function Student(){
+      alert("student")
+  }
+  Student()  // 输出student
+  let stu = new Student() // 输出student
+  alert(stu) //输出 object Object
+</script>
+</body>
+</html>

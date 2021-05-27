@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>代码的执行顺序2</title>
+</head>
+<body>
+<script>
+  window.onload=function (){
+    document.getElementById('mbt').onclick=function (){
+      document.getElementById('mtt').type = 'checkbox'
+    }
+  }
+</script>
+<input type="text" id="mtt">
+<input type="button" value="change" id="mbt">
+</body>
+</html>

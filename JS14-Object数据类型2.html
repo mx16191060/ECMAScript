@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Object数据类型2</title>
+</head>
+<body>
+<script>
+    /*
+    JS中类定义同时也是一个构造函数
+     */
+    function User(a, b, c){
+        // User 类中有三个属性 sno，sname和sage
+        this.sno = a;
+        this.sname = b;
+        this.sage = c;
+    }
+    // 创建对象
+    let u1 = new User(1, "zhangsan", 30)
+    alert(u1.sage)
+    alert(u1.sno)
+    alert(u1.sname)
+
+    // 访问对象中属性 还可以用这种方法
+    alert(u1["sno"])
+    alert(u1["sname"])
+    alert(u1["sage"])
+
+    Product = function (pno, pname, price){
+        this.pno = pno;
+        this.pname = pname;
+        this.price = price;
+        //函数
+        this.getPrice = function (){
+            return this.price
+        }
+    }
+    let pro = new Product(1, 'iphone', 9999)
+    alert(pro.getPrice())
+
+    // 可以通过prototype属性动态的给JS类扩展属性和方法
+    Product.prototype.getName = function (){
+        return this.pname
+    }
+    // 调用后期扩展的getName函数
+    alert(pro.getName())
+
+    // 给String类型扩展函数
+    String.prototype.suiyi = function (){
+        alert("可以随意给String类扩展函数")
+    }
+    "a".suiyi()
+</script>
+</body>
+</html>

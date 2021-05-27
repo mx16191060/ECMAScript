@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Boolean数据类型</title>
+</head>
+<body>
+<script>
+  /*
+  1、js 中的 boolean数据类型永远只有两个值 true 和 false
+  2、Boolean 类型中有一个函数叫 Boolean（变量名）
+    作用是将非boolean数据类型转化为boolean数据类型
+    规律 有就是真 没有就是假
+   */
+  let userName = ""
+  if (Boolean(userName))
+    alert("欢迎你"+ userName)
+  else
+    alert("用户名不能为空")
+
+  Boolean(1) // true
+  Boolean(0) // false
+  Boolean("") // false
+  Boolean("abc") // true
+  Boolean(NaN) // false
+  Boolean(null) // false
+  Boolean(undefined) // false
+  Boolean(Infinity) // true
+</script>
+</body>
+</html>

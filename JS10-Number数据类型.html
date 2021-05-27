@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Number数据类型</title>
+</head>
+<body>
+<script type="text/javascript">
+  /*
+  Number数据类型包括
+  整数 小数 NaN Infinity都属于Number类型
+   */
+  // 什么情况下结果是NaN
+  // 本来结果应该是一个数字，最后算完不是一个数字时，结果是NaN
+  let a = 10;
+  let b = "adaw";
+  let c = a / b;
+  alert(c) //NaN
+
+  a = "abc"
+  b = 10
+  c = b + a // c = "10abc"
+  alert(10 / 0) //Infinity
+  alert(10 /3 ) // 3.
+  // 关于isNaN
+  // isNaN（变量名） 如果变量是一个数字返回为false 如果变量不是一个数字返回为true
+  alert(isNaN(NaN))
+  // parseInt() 将字符串转化为整数，向下取整
+  // parseFloat() 将字符串转化为小数
+  parseInt("3.9999") // 3
+  parseInt(3.9999) // 3
+  parseFloat("4.22" + 1) // 5.22
+  alert(Math.ceil(1.2)) //2
+</script>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JS控制语句</title>
+</head>
+<body>
+<script>
+  /*
+  if
+  switch
+  while
+  do while
+  for 循环
+  continue
+  break
+  for in语句
+  with语句
+   */
+  let arr = [1, 2, 3.14, null, undefined]
+  for (let i = 0; i <arr.length; ++i){
+      alert(arr[i])
+  }
+  for (let k in arr){
+      alert(k)
+  }
+
+  User = function (userName, password){
+      this.userName = userName
+      this.password = password
+  }
+  let user = new User('zhangsan', 123123)
+  for (let a in user){
+      alert(a + typeof a + user[a])
+  }
+</script>
+</body>
+</html>

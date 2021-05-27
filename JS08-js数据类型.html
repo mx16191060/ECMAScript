@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>js数据类型</title>
+</head>
+<body>
+<script>
+  /*
+  1、JS中的数据类型有：原始类型，引用类型
+  原始类型：Undefined，Number，String，boolean，Null
+  引用类型：Object和Object子类
+  2、ES6新特性，Symbol数据类型
+  3、JS中有一个运算符叫typeof 可以动态获取数据的类型
+    typeof 语法格式 type of ➕ 变量名
+    返回值为以下六个字符串其中之一
+    "undefined"、"number"、"string" "boolean" "null" "object"
+  4、js中比较字符串用"==" 没有euqals
+   */
+  let n = null;
+  alert(typeof n) //结果应该是null 但是结果是object 这是js中的一个bug null 确实是null类型
+
+  function sayHello(){}
+  alert(typeof sayHello()) // 结果是function
+</script>
+
+</body>
+</html>
